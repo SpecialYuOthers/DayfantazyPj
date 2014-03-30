@@ -36,7 +36,6 @@
 		5087E75417EB910900C73F5D /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
 		5087E75517EB910900C73F5D /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
 		5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
-		5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
 		5087E76317EB910900C73F5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		5087E76517EB910900C73F5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		5087E76717EB910900C73F5D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -76,6 +75,8 @@
 		DB3A452E18E84D8800F7D47C /* enemy1.png in Resources */ = {isa = PBXBuildFile; fileRef = DB3A452718E84D8800F7D47C /* enemy1.png */; };
 		DB3A452F18E84D8800F7D47C /* enemy1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB3A452818E84D8800F7D47C /* enemy1.plist */; };
 		DB3A453018E84D8800F7D47C /* tmw_desert_spacing.png in Resources */ = {isa = PBXBuildFile; fileRef = DB3A452918E84D8800F7D47C /* tmw_desert_spacing.png */; };
+		DB3A453718E861DA00F7D47C /* attack1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB3A453518E861DA00F7D47C /* attack1.plist */; };
+		DB3A453818E861DA00F7D47C /* attack1.png in Resources */ = {isa = PBXBuildFile; fileRef = DB3A453618E861DA00F7D47C /* attack1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +282,8 @@
 		DB3A452718E84D8800F7D47C /* enemy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy1.png; sourceTree = "<group>"; };
 		DB3A452818E84D8800F7D47C /* enemy1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = enemy1.plist; sourceTree = "<group>"; };
 		DB3A452918E84D8800F7D47C /* tmw_desert_spacing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmw_desert_spacing.png; sourceTree = "<group>"; };
+		DB3A453518E861DA00F7D47C /* attack1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = attack1.plist; sourceTree = "<group>"; };
+		DB3A453618E861DA00F7D47C /* attack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attack1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +472,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DB3A453518E861DA00F7D47C /* attack1.plist */,
+				DB3A453618E861DA00F7D47C /* attack1.png */,
 				DB3A452318E84D8800F7D47C /* chara1.png */,
 				DB3A452418E84D8800F7D47C /* chara1.plist */,
 				DB3A452518E84D8800F7D47C /* desert.tmx */,
@@ -648,6 +653,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB3A453718E861DA00F7D47C /* attack1.plist in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -658,6 +664,7 @@
 				DB3A452A18E84D8800F7D47C /* chara1.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				DB3A453818E861DA00F7D47C /* attack1.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
@@ -708,7 +715,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
-				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

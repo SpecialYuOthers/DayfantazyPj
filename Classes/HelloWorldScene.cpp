@@ -81,7 +81,7 @@ bool HelloWorld::init()
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("chara1.plist");
     eSprite = Sprite::createWithSpriteFrameName("chara1_top_3.jpg");
     eSprite->setPosition(Point(500*0.5, 500*0.5));
-    eSprite->setTag(99);
+    eSprite->setTag(1);
     this->addChild(eSprite);
     
     // enemy
@@ -90,6 +90,8 @@ bool HelloWorld::init()
     enemySprite->setPosition(Point(300*0.5, 300*0.5));
     enemySprite->setTag(100);
     this->addChild(enemySprite);
+    
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("attack1.plist");
     
     // タッチイベント有効
     auto listener = EventListenerTouchOneByOne::create();
@@ -124,6 +126,7 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 
 bool HelloWorld::onTouchBegan(Touch *pTouch, Event *pEvent)
 {
+
     //タッチが開始された時の処理
     //タッチした座標を取得
     Point location = pTouch->getLocation();
@@ -218,6 +221,7 @@ void HelloWorld::onTouchCancelled(Touch *pTouch, Event *pEvent)
 // enemylogic
 void HelloWorld::enemyLogic(float times)
 {
+/*
     Size enemyPoint = Director::getInstance()->getWinSize();
     int randWidth = rand() % (int)enemyPoint.height;
     int randHeight = rand() % (int)enemyPoint.width;
@@ -228,11 +232,24 @@ void HelloWorld::enemyLogic(float times)
     enemySprite->setPosition(Point(randWidth, randHeight));
     enemySprite->setTag(randWidth);
     this->addChild(enemySprite);
+*/
 }
 
 // enemylogic
 void HelloWorld::enemyLogicUpdate(float times)
 {
+    Rect playerRect = eSprite->boundingBox();
+    Rect enemyRect = enemySprite->boundingBox();
+    
+    if(playerRect.intersectsRect(enemyRect)){
+        
+        //trueの場合に、何かしらの処理を行う
+        auto attackSprite = Sprite::createWithSpriteFrameName("attack1_1.jpg");
+        
+        attackSprite->setPosition(Point(enemySprite->getPosition().x, enemySprite->getPosition().y));
+        attackSprite->setTag(111111111);
+        this->addChild(attackSprite);
+    }
     //アニメーションを止める
     enemySprite->stopActionByTag(99999);
     enemySprite->stopActionByTag(999991);
